@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 11:29:10 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 15:30:27 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/16 15:46:19 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	ft_putstr(char *s, int *len);
 void	ft_putchar(char c, int *len);
 void	ft_putnbr(int nb, int *len);
 void	ft_putunsigned(unsigned int nb, int *len);
-void	ft_putnbr_base(unsigned int nbr, char *base, int *len);
+void	ft_putnbr_base(unsigned long long nbr, char *base, int *len);
 
 #endif

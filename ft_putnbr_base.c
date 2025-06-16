@@ -6,13 +6,13 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 14:22:17 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 15:28:49 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/16 15:46:07 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_base(unsigned int nbr, char *base, int *len)
+void	ft_putnbr_base(unsigned long long nbr, char *base, int *len)
 {
 	int		i;
 	char	buffer[65];
