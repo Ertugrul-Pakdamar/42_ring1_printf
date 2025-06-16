@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 13:03:45 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 15:38:31 by epakdama         ###   ########.fr       */
+/*   Created: 2025/06/16 14:22:17 by epakdama          #+#    #+#             */
+/*   Updated: 2025/06/16 15:28:49 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *s, int *len)
+void	ft_putnbr_base(unsigned int nbr, char *base, int *len)
 {
-	int	i;
+	int		i;
+	char	buffer[65];
 
-	if (s == NULL)
+	if (nbr == 0)
 	{
-		ft_putstr("(null)", len);
+		ft_putchar(base[0], len);
 		return ;
 	}
 	i = 0;
-	while (s[i])
+	while (nbr > 0)
 	{
-		ft_putchar(s[i], len);
-		i++;
+		buffer[i++] = base[nbr % 16];
+		nbr /= 16;
 	}
+	while (--i >= 0)
+		ft_putchar(buffer[i], len);
 }

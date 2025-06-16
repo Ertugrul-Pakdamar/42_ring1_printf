@@ -6,13 +6,14 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 13:08:26 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 13:08:55 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/16 15:31:55 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char c, int *len)
 {
 	write(1, &c, 1);
+	*len += 1;
 }

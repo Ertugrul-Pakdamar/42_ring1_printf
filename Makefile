@@ -6,7 +6,8 @@ SRCS = ft_printf.c \
 	ft_putstr.c \
 	ft_putchar.c \
 	ft_putnbr.c \
-	ft_putunsigned.c
+	ft_putunsigned.c \
+	ft_putnbr_base.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
