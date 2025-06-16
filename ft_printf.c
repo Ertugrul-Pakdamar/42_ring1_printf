@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 11:29:38 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 15:47:04 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/16 19:35:03 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static void	write_variadic(char *s, int i, va_list args, int *len)
 {
+	void	*ptr;
+
 	if (s[i + 1] == 's')
 		ft_putstr(va_arg(args, char *), len);
 	else if (s[i + 1] == 'c')
@@ -24,16 +26,19 @@ static void	write_variadic(char *s, int i, va_list args, int *len)
 		ft_putunsigned(va_arg(args, unsigned int), len);
 	else if (s[i + 1] == 'p')
 	{
-		ft_putstr("0x", len);
-		ft_putnbr_base(va_arg(args, unsigned long long), "0123456789abcdef",
-			len);
+		ptr = va_arg(args, void *);
+		if (ptr == NULL)
+			ft_putstr("(nil)", len);
+		else
+		{
+			ft_putstr("0x", len);
+			ft_putnbr_base((unsigned long long)ptr, LOWER_BASE, len);
+		}
 	}
 	else if (s[i + 1] == 'x')
-		ft_putnbr_base(va_arg(args, unsigned long long), "0123456789abcdef",
-			len);
+		ft_putnbr_base(va_arg(args, unsigned long long), LOWER_BASE, len);
 	else if (s[i + 1] == 'X')
-		ft_putnbr_base(va_arg(args, unsigned long long), "0123456789ABCDEF",
-			len);
+		ft_putnbr_base(va_arg(args, unsigned long long), UPPER_BASE, len);
 }
 
 int	ft_printf(const char *s, ...)
@@ -55,5 +60,6 @@ int	ft_printf(const char *s, ...)
 			write_variadic((char *)s, i++, args, &len);
 		i++;
 	}
+	va_end(args);
 	return (len);
 }
