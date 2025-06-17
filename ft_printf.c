@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 11:29:38 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 19:47:47 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/17 10:02:49 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static void	write_variadic(char *s, int i, va_list args, int *len)
 		ptr = va_arg(args, void *);
 		if (ptr == NULL)
 			ft_putstr("(nil)", len);
-		// FIXME:	nil yazıyor orijinaliyle aynı ama printf medicten geçmedi
 		else
 		{
 			ft_putstr("0x", len);
