@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 11:29:38 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/17 10:02:49 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/17 19:44:16 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ static void	write_variadic(char *s, int i, va_list args, int *len)
 		else
 		{
 			ft_putstr("0x", len);
-			ft_putnbr_base((unsigned long long)ptr, LOWER_BASE, len);
+			ft_putnbr_base((unsigned long)ptr, LOWER_BASE, len);
 		}
 	}
 	else if (s[i + 1] == 'x')
-		ft_putnbr_base(va_arg(args, unsigned long long), LOWER_BASE, len);
+		ft_putnbr_base(va_arg(args, unsigned int), LOWER_BASE, len);
 	else if (s[i + 1] == 'X')
-		ft_putnbr_base(va_arg(args, unsigned long long), UPPER_BASE, len);
+		ft_putnbr_base(va_arg(args, unsigned int), UPPER_BASE, len);
 }
 
 int	ft_printf(const char *s, ...)

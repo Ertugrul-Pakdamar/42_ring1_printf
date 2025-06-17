@@ -6,13 +6,13 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 14:22:17 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/16 19:34:24 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/17 19:44:31 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_base(unsigned long long nbr, char *base, int *len)
+void	ft_putnbr_base(unsigned long nbr, char *base, int *len)
 {
 	int		i;
 	char	buffer[65];
@@ -28,6 +28,6 @@ void	ft_putnbr_base(unsigned long long nbr, char *base, int *len)
 		buffer[i++] = base[nbr % 16];
 		nbr /= 16;
 	}
-	while (--i >= 0)
+	while (i-- > 0)
 		ft_putchar(buffer[i], len);
 }
