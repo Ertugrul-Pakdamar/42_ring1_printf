@@ -1,6 +1,31 @@
-# ft_printf 🚀
+###
+
+# 42 Printf 🚀
+
+###
+
+> 🚧 **Status:** In Progress
 
 This project is a standalone reimplementation of the basic functionalities of the standard `printf` function in C, under the name `ft_printf`. The project supports various data types and formatting options.
+
+
+###
+
+<h3 align="left">🛠 Language and tools</h3>
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40" alt="c logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="vscode logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="40" alt="bash logo"  />
+</div>
+
+###
 
 ## Features ✨
 
@@ -13,6 +38,8 @@ This project is a standalone reimplementation of the basic functionalities of th
 - `%p` : Prints a pointer address in hexadecimal
 - `%%` : Prints a percent sign
 
+---
+
 ## File Structure 📁
 
 - `ft_printf.c` : Implementation of the main `ft_printf` function
@@ -24,15 +51,21 @@ This project is a standalone reimplementation of the basic functionalities of th
 - `ft_putnbr_base.c` : Function to print numbers in different bases
 - `Makefile` : Build instructions
 
+---
+
 ## Installation and Compilation 🛠️
 
 To compile the project, run the following command in your terminal:
 
 ```sh
+git clone git@github.com:Ertugrul-Pakdamar/42_ring1_printf.git
+cd 42_ring1_printf
 make
 ```
 
 This will generate a static library file named `libftprintf.a`.
+
+---
 
 ## Usage 📦
 
@@ -60,6 +93,10 @@ int main()
 }
 ```
 
+---
+
 ## Contributing 🤝
 
 If you would like to contribute to this project, please submit a pull request. If you find any bugs or have suggestions for improvements, feel free to open an issue.
+
+---
