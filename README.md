@@ -1,8 +1,8 @@
-# ft_printf
+# ft_printf 🚀
 
 This project is a standalone reimplementation of the basic functionalities of the standard `printf` function in C, under the name `ft_printf`. The project supports various data types and formatting options.
 
-## Features
+## Features ✨
 
 - `%c` : Prints a character
 - `%s` : Prints a string
@@ -13,7 +13,7 @@ This project is a standalone reimplementation of the basic functionalities of th
 - `%p` : Prints a pointer address in hexadecimal
 - `%%` : Prints a percent sign
 
-## File Structure
+## File Structure 📁
 
 - `ft_printf.c` : Implementation of the main `ft_printf` function
 - `ft_printf.h` : Function prototypes and macros
@@ -24,7 +24,7 @@ This project is a standalone reimplementation of the basic functionalities of th
 - `ft_putnbr_base.c` : Function to print numbers in different bases
 - `Makefile` : Build instructions
 
-## Installation and Compilation
+## Installation and Compilation 🛠️
 
 To compile the project, run the following command in your terminal:
 
@@ -34,7 +34,7 @@ make
 
 This will generate a static library file named `libftprintf.a`.
 
-## Usage
+## Usage 📦
 
 To include this project in your own project:
 
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## Contributing
+## Contributing 🤝
 
 If you would like to contribute to this project, please submit a pull request. If you find any bugs or have suggestions for improvements, feel free to open an issue.
