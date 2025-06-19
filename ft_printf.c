@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 11:29:38 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/17 19:44:16 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/06/19 14:16:59 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] != '%')
 			ft_putchar(s[i], &len);
+		else if (s[i + 1] == '\0')
+			break ;
 		else if (s[i + 1] == '%')
 			ft_putchar(s[i++], &len);
 		else
