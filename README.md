@@ -15,7 +15,7 @@
 
 ###
 
-> 🚧 **Status:** In Progress
+> 🚧 **Status:** Completed
 
 This project is a standalone reimplementation of the basic functionalities of the standard `printf` function in C, under the name `ft_printf`. The project supports various data types and formatting options.
 
